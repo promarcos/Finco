@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
         builder.setNegativeButton("Não Obrigado!", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainActivity.this, "negativo=" + which, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Não Cadastrado!", Toast.LENGTH_SHORT).show();
+                edt_log.setText("");
+                edt_sen.setText("");
             }
         });
 
@@ -58,7 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if(cursor.getCount() == 1){
                     Intent it = new Intent(getApplicationContext(),Fluxo.class);
+                    edt_log.setText("");
+                    edt_sen.setText("");
                     startActivity(it);
+
                 }else{
                     builder.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
                         @Override
