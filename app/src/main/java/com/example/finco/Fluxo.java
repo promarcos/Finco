@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,6 +41,7 @@ public class Fluxo extends AppCompatActivity {
         txt_soma_des = (TextView) findViewById(R.id.txt_soma_des);
         txt_soma_rec = (TextView) findViewById(R.id.txt_soma_rec);
         txt_soma_tot = (TextView) findViewById(R.id.txt_soma_tot);
+        ImageView img_sair = (ImageView) findViewById(R.id.img_sair);
         Button bt_des = (Button) findViewById(R.id.bt_des);
         Button bt_rec = (Button) findViewById(R.id.bt_rec);
 
@@ -59,6 +61,14 @@ public class Fluxo extends AppCompatActivity {
                 startActivity(it);
             }
         });
+
+        img_sair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     @Override
@@ -68,7 +78,7 @@ public class Fluxo extends AppCompatActivity {
         final ArrayList<Receitas> listarec = bd.getAllReceitas();
         txt_soma_des.setText(bd.somaDesp());
         txt_soma_rec.setText(bd.somaRec());
-        txt_soma_tot.setText(bd.somaTotal());
+
         DespAdapter adap_des = new DespAdapter(this,listades);
         RecAdapter adap_rec = new RecAdapter(this,listarec);
 
@@ -94,6 +104,7 @@ public class Fluxo extends AppCompatActivity {
                 startActivity(it);
             }
         });
+        txt_soma_tot.setText(bd.somaTotal());
     }
 
 

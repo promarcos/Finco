@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="id"
+        android:background="@color/cinza_listView"
         android:textAlignment="viewStart" />
 
     <TextView
@@ -19,6 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="descricao"
+        android:background="@color/cinza_listView"
         android:textAlignment="textStart" />
 
     <TextView
@@ -27,5 +29,6 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Valor"
+        android:background="@color/cinza_listView"
         android:textAlignment="viewEnd" />
     </LinearLayout>

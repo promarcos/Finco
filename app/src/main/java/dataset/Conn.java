@@ -287,7 +287,7 @@ public class Conn extends SQLiteOpenHelper {
 
     public String somaTotal(){
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "SELECT SUM(SOMA) AS TOTAL FROM (SELECT SUM(VALOR) AS SOMA FROM "+TAB_REC+" UNION ALL SELECT SUM(VALOR) AS SOMA FROM "+TAB_REC+")";
+        String query = "SELECT SUM(SOMA) AS TOTAL FROM (SELECT (SUM(VALOR)*-1) AS SOMA FROM "+TAB_DESP+" UNION ALL SELECT SUM(VALOR) AS SOMA FROM "+TAB_REC+")";
         Cursor cursor = db.rawQuery(query,null);
         if(cursor!=null) {
             cursor.moveToFirst();
