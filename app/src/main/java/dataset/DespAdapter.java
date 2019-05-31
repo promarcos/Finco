@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 import entidades.Despesas;
 
-public class UserAdapter extends ArrayAdapter<Despesas> {
+public class DespAdapter extends ArrayAdapter<Despesas> {
 
-    public UserAdapter(Context context, ArrayList<Despesas> despesas) {
+    public DespAdapter(Context context, ArrayList<Despesas> despesas) {
         super(context, 0, despesas);
     }
 

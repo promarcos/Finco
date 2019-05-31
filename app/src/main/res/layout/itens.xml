@@ -5,24 +5,27 @@
     android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/txtid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="id" />
+    <TextView
+        android:id="@+id/txtid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="id"
+        android:textAlignment="viewStart" />
 
-        <TextView
-            android:id="@+id/txtdesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="descricao" />
+    <TextView
+        android:id="@+id/txtdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="descricao"
+        android:textAlignment="textStart" />
 
-        <TextView
-            android:id="@+id/txtval"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Valor" />
+    <TextView
+        android:id="@+id/txtval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Valor"
+        android:textAlignment="viewEnd" />
     </LinearLayout>

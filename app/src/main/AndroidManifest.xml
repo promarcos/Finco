@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".FrmDespesa"></activity>
+        <activity android:name=".FrmReceita"></activity>
         <activity android:name=".Fluxo" />
         <activity android:name=".MainActivity">
             <intent-filter>
